@@ -44,16 +44,16 @@ function getWeather(city) {
                 let temp = document.createElement("li")
                 temp.classList.add("temp")
                 temp.innerHTML =  "Temp: " + Math.floor(data.list[index].main.temp)+ `&#176F;`
-                weatherInfo.append(temp)
+                weatherInfo.appendChild(temp)
                 let humidity = document.createElement("li")
                 humidity.classList.add("hum")
                 humidity.innerHTML = "humidity: " + data.list[index].main.humidity+ "&percnt;"
-                weatherInfo.append(humidity)
+                weatherInfo.appendChild(humidity)
                 let speed = document.createElement("li")
                 speed.innerHTML = "wind speed: " + Math.floor(data.list[index].wind.speed)+ `mph`
-                weatherInfo.append(speed)
-                mainCard.append(weatherInfo)
-                forecast[i].append(mainCard)
+                weatherInfo.appendChild(speed)
+                mainCard.appendChild(weatherInfo)
+                forecast[index] =mainCard
             }
         })
 }
